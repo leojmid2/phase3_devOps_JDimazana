@@ -14,9 +14,9 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long userid;
 	
-	private String firstName;
+	private String firstname;
 	
-	private String lastName;
+	private String lastname;
 	
 	private String username;
 	
@@ -31,10 +31,10 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String firstName, String lastName, String username, String email, String role,
+	public User(String firstname, String lastname, String username, String email, String role,
 			String password) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.username = username;
 		this.email = email;
 		this.role = role;
@@ -45,20 +45,20 @@ public class User {
 		return userid;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastName(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getUsername() {
@@ -95,7 +95,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userid=" + userid + ", firstName=" + firstName + ", lastName=" + lastName + ", username="
+		return "User [userid=" + userid + ", firstName=" + firstname + ", lastName=" + lastname + ", username="
 				+ username + ", email=" + email + ", role=" + role + ", password=" + password + "]";
 	}
 	

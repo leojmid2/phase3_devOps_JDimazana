@@ -28,9 +28,7 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(Long productId, String name, Double price, Category category) {
-		super();
-		this.productId = productId;
+	public Product(String name, Double price, Category category) {
 		this.name = name;
 		this.price = price;
 		this.category = category;
@@ -67,6 +65,13 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
+//	@Override
+//	public String toString() {
+//		return "Product [productId=" + productId + ", name=" + name + ", price=" + price + ", category=" + category
+//				+ "]";
+//	}
+	
 	
 	
 }

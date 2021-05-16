@@ -6,6 +6,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,9 +17,12 @@ public class LineItem {
 	private Long itemId;
 	
 	//one line item has one product
-	@OneToOne(fetch=FetchType.LAZY)
+	@OneToOne
 	private Product product;
 		
+	@ManyToOne
+	private Purchase purchase;
+	
 	
 	@Column(nullable=false)
 	private Long quantity;
@@ -27,6 +31,15 @@ public class LineItem {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	
+	public LineItem(Product product, Long quantity) {
+		this.product = product;
+		this.quantity = quantity;
+	}
+
+
 
 	public Long getItemId() {
 		return itemId;
@@ -50,6 +63,14 @@ public class LineItem {
 
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
+	}
+
+	public Purchase getPurchase() {
+		return purchase;
+	}
+
+	public void setPurchase(Purchase purchase) {
+		this.purchase = purchase;
 	}
 
 
