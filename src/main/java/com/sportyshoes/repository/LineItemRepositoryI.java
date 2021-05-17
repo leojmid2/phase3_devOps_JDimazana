@@ -10,6 +10,8 @@ import com.sportyshoes.model.Purchase;
 import com.sportyshoes.model.User;
 
 public interface LineItemRepositoryI extends JpaRepository<LineItem,Long>{
+	
+	
 
 	
 	

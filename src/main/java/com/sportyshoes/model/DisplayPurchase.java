@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class DisplayPurchase {
 	
-	private BigInteger purchaseNum;
+	private BigInteger purchaseId;
 	
 	private Date purchaseDate;
 	
@@ -20,20 +20,20 @@ public class DisplayPurchase {
 		// TODO Auto-generated constructor stub
 	}
 
-	public DisplayPurchase(BigInteger purchaseNum, Date purchaseDate, String name, Double price) {
+	public DisplayPurchase(BigInteger purchaseId, Date purchaseDate, String name, Double price) {
 		super();
-		this.purchaseNum = purchaseNum;
+		this.purchaseId = purchaseId;
 		this.purchaseDate = purchaseDate;
 		this.name = name;
 		this.price = price;
 	}
 
-	public BigInteger getPurchaseNum() {
-		return purchaseNum;
+	public BigInteger getPurchaseId() {
+		return purchaseId;
 	}
 
-	public void setPurchaseNum(BigInteger purchaseNum) {
-		this.purchaseNum = purchaseNum;
+	public void setPurchaseId(BigInteger purchaseId) {
+		this.purchaseId = purchaseId;
 	}
 
 	public Date getPurchaseDate() {
@@ -62,7 +62,7 @@ public class DisplayPurchase {
 
 	@Override
 	public String toString() {
-		return "displayPurchase [purchaseNum=" + purchaseNum + ", purchaseDate=" + purchaseDate + ", name=" + name
+		return "displayPurchase [purchaseNum=" + purchaseId + ", purchaseDate=" + purchaseDate + ", name=" + name
 				+ ", price=" + price + "]";
 	}
 	

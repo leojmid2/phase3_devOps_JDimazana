@@ -32,9 +32,9 @@ import com.sportyshoes.service.ProductServiceImp;
 import com.sportyshoes.service.PurchaseServiceI;
 
 @SpringBootApplication
-public class SportyShoesApplication implements CommandLineRunner{
+public class SportyShoesApplication { //implements CommandLineRunner{
 	
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+/*	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private UserRepository userRepository;
@@ -49,18 +49,17 @@ public class SportyShoesApplication implements CommandLineRunner{
 	@Autowired
 	private CategoryServiceI categoryService;
 
-	
-	public static void main(String[] args) {
-		SpringApplication.run(SportyShoesApplication.class, args);
-	}
-	
 	@Autowired
 	private LineItemServiceI lineItemService;
 
 	@Autowired
 	private PurchaseServiceI purchaseService;
+*/	
+	public static void main(String[] args) {
+		SpringApplication.run(SportyShoesApplication.class, args);
+	}
+	
 
-	@Override
 	public void run(String... args) throws Exception {
 	
 		/******USER TEST*********/
@@ -113,7 +112,7 @@ public class SportyShoesApplication implements CommandLineRunner{
 		
 
 		/******* PRODUCT TEST ***********/
-		
+	/*	
 		Category category = categoryService.findById(1L);
 		//Product p1 = new Product("Air Jordan 7",200.00, category);
 		//productService.save(p1);
@@ -121,7 +120,7 @@ public class SportyShoesApplication implements CommandLineRunner{
 		List<Product> products = productService.findAll();
 		logger.info("List of all products: "+ products.get(1).getName());
 		
-		
+	*/	
 		/****** PURCHASE TEST AND LINE ITEM  *****/
 		/*
 		 * 
@@ -165,7 +164,7 @@ public class SportyShoesApplication implements CommandLineRunner{
 		*/
 		
 		/***** FindByDate ***/
-		Date date = Date.valueOf("2021-05-17");
+/*		Date date = Date.valueOf("2021-05-17");
 		List<Purchase> purchases= purchaseService.findByDate(date);
 		for (Purchase p:purchases) {
 			logger.info("purchase " + p.getPurchaseNum());
@@ -176,6 +175,6 @@ public class SportyShoesApplication implements CommandLineRunner{
 		
 		List<DisplayPurchase> dp = purchaseService.findByCategory(category1);
 		logger.info("purchase " + dp.isEmpty());
-	}	
+*/	}	
 
 }

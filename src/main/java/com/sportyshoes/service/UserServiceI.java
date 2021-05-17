@@ -9,7 +9,7 @@ public interface UserServiceI {
 	
 	public Optional<User> findById(Long id);
 	
-	public User findByUsernameAndPassword(String username, String password);
+	public List<User> findByUsernameAndPassword(String username, String password);
 	
 	public void save(User user);
 	

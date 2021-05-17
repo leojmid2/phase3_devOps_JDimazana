@@ -41,15 +41,12 @@ public class PurchaseServicesImp implements PurchaseServiceI {
 
 	@Override
 	public List<DisplayPurchase> findByCategory(Category category) {
-		// TODO Auto-generated method stub
-		//return repository.findByCategory(category.getCatId());
-		List<DisplayPurchase> ds= new ArrayList<DisplayPurchase>();
-		
+		List<DisplayPurchase> ds= new ArrayList<DisplayPurchase>();		
 		List<Object[]> rs = repository.findByCategory(category.getCatId());
 		for (Object[] r : rs) {
 			//map display purchase
 			DisplayPurchase dp = new DisplayPurchase();
-			dp.setPurchaseNum((BigInteger)r[0]);
+			dp.setPurchaseId((BigInteger)r[0]);
 			dp.setPurchaseDate((Date)r[1]);
 			dp.setName((String)r[2]);
 			dp.setPrice((Double)r[3]);

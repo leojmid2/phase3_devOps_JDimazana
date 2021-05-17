@@ -1,5 +1,6 @@
 package com.sportyshoes.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,11 @@ public class CategoryServiceImp implements CategoryServiceI {
 	public Category findById(Long id) {
 		Optional<Category> category = categoryRepository.findById(id);
 		return category.get();
+	}
+
+	@Override
+	public List<Category> findByAll() {
+		return categoryRepository.findAll();
 	}
 
 }

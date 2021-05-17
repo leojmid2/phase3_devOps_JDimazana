@@ -28,13 +28,9 @@ public class UserServiceImp implements UserServiceI {
 	}
 
 	@Override
-	public User findByUsernameAndPassword(String username, String password) {
+	public List<User> findByUsernameAndPassword(String username, String password) {
 		logger.info("findByUsernameAndPassword");
-		List<User> users = userRepository.findByUsernameAndPassword(username, password);
-		if (!users.isEmpty()) {
-			return users.get(0);
-		}
-		return null;
+		return userRepository.findByUsernameAndPassword(username, password);
 	}
 
 	@Override

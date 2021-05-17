@@ -24,7 +24,7 @@ public interface PurchaseRepositoryI extends JpaRepository<Purchase,Long>{
 	public List<Purchase> findByCategory(@Param("id") Long categoryid);
 	*/
 	
-	@Query(value="SELECT p.purchase_num, p.purchase_date, pr.name, pr.price FROM PURCHASE p INNER JOIN LINE_ITEM l on p.purchase_id=l.purchase_purchase_id INNER JOIN PRODUCT pr on l.product_product_id = pr.product_id WHERE pr.category_cat_id=:id",nativeQuery=true)
+	@Query(value="SELECT p.purchase_id, p.purchase_date, pr.name, pr.price FROM PURCHASE p INNER JOIN LINE_ITEM l on p.purchase_id=l.purchase_purchase_id INNER JOIN PRODUCT pr on l.product_product_id = pr.product_id WHERE pr.category_cat_id=:id",nativeQuery=true)
 	public List<Object[]> findByCategory(@Param("id") Long categoryid);
 
 

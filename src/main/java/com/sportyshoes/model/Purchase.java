@@ -25,9 +25,7 @@ public class Purchase {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long purchaseId;
-	
-	private Long purchaseNum;
-	
+		
 	@CreationTimestamp
 	private LocalDateTime creationDate;
 	
@@ -49,9 +47,7 @@ public class Purchase {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Purchase(Long purchaseNum, List<LineItem> lineItems, Date purchaseDate, Double subTotal, Double salesTax, Double total) {
-		super();
-		this.purchaseNum = purchaseNum;
+	public Purchase(List<LineItem> lineItems, Date purchaseDate, Double subTotal, Double salesTax, Double total) {
 		this.lineItems = lineItems;
 		this.total = total;
 	}
@@ -64,14 +60,7 @@ public class Purchase {
 		this.purchaseId = purchaseId;
 	}
 
-	public Long getPurchaseNum() {
-		return purchaseNum;
-	}
-
-	public void setPurchaseNum(Long purchaseNum) {
-		this.purchaseNum = purchaseNum;
-	}
-
+	
 	public LocalDateTime getOrderDate() {
 		return creationDate;
 	}

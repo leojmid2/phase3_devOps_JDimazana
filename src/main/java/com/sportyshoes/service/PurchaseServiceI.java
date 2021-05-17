@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import com.sportyshoes.model.Category;
 import com.sportyshoes.model.DisplayPurchase;
-import com.sportyshoes.model.LineItem;
 import com.sportyshoes.model.Purchase;
 
 public interface PurchaseServiceI {
